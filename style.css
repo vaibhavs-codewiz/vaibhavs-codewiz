@@ -1,0 +1,14 @@
+#heading {
+  color: black;
+  background-color: aquamarine;
+}
+.parent {
+  background-color: blue;
+  width: 300px;
+  height: 100px;
+}
+.child {
+  background-color: yellowgreen;
+  width: 150px;
+  height: 80px;
+}
