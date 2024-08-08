@@ -12,3 +12,134 @@
   width: 150px;
   height: 80px;
 }
+
+.main-Header {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  width: 100px;
+  height: 80px;
+  border-radius: 30%;
+  margin: 4px 200px;
+}
+.logo:hover {
+  width: 120px;
+  height: 100px;
+}
+.Headerpart2 {
+}
+.links {
+  display: flex;
+}
+.links > li {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 24px;
+}
+.content {
+  margin-top: 10px;
+  margin-left: 180px;
+  height: 70vh;
+}
+.searchbar {
+  display: flex;
+  width: 95%;
+  margin: 10px;
+  padding: 10px;
+}
+.srchbtn{
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 30%;
+  background: rgb(117, 221, 117);
+}
+.contentsrch {
+  margin-left: 40%;
+}
+.cardContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,300px));
+  grid-auto-rows: auto;
+  
+  /* grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: auto auto auto; */
+}
+.card {
+  /* border: 1px solid; */
+  width: 250px;
+  height: 350px;
+  margin-left: 1px;
+  margin-right: -10px;
+  /* background-color: rgb(151, 135, 135); */
+  border-radius: 10%;
+  transition: background-color 0.5s ease;
+}
+.cardimage {
+  object-fit: cover;
+  margin: 5px 10px;
+  width: 230px;
+  height: 155px;
+  border-radius: 20%;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.cardpart {
+  margin-left: 5px;
+}
+.cardcuisine {
+  margin-top: -10px;
+  margin-bottom: -4px;
+}
+.profile {
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.checked {
+  color: #e8d7d7;
+}
+.rating {
+  transition: width 0.3s ease-in-out;
+  background: green;
+  border-radius: 50%;
+  padding: 2px 4px;
+}
+.container {
+  position: relative;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  opacity: 0;
+}
+.card:hover {
+  cursor: pointer;
+  /* background-color: red; */
+  .cardimage {
+    width: 260px;
+    height: 175px;
+    object-fit: cover;
+  }
+  .bottom-left {
+    opacity: 1;
+    transition: width,height 0.7s ease-in-out;
+    font-family: ProximaNovaCond_Black;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.92);
+    width: 100%;
+  }
+  .rating {
+    padding: 4px 6px;
+  }
+  .checked {
+  }
+}
