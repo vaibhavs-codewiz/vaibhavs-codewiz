@@ -33,8 +33,6 @@
 }
 .links {
   display: flex;
-}
-.links > li {
   list-style-type: none;
   padding: 10px;
   font-size: 24px;
@@ -50,7 +48,7 @@
   margin: 10px;
   padding: 10px;
 }
-.srchbtn{
+.srchbtn {
   cursor: pointer;
   padding: 10px;
   border: none;
@@ -60,11 +58,26 @@
 .contentsrch {
   margin-left: 40%;
 }
+.shimmerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  grid-auto-rows: auto;
+}
+.shimmercard {
+  background-color: rgb(189, 183, 183);
+  object-fit: cover;
+  margin: 5px 10px;
+  width: 230px;
+  height: 155px;
+  border-radius: 20%;
+  margin-right: -10px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
 .cardContent {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,300px));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
   grid-auto-rows: auto;
-  
+
   /* grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: auto auto auto; */
 }
@@ -128,7 +141,7 @@
   }
   .bottom-left {
     opacity: 1;
-    transition: width,height 0.7s ease-in-out;
+    transition: width, height 0.7s ease-in-out;
     font-family: ProximaNovaCond_Black;
     font-weight: 800;
     font-size: 22px;

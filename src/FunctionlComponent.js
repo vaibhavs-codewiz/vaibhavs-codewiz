@@ -1,83 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import {Header} from "./component/Header";
+import { Header } from "./component/Header";
 import ResContainer from "./component/ResContainer";
+import ContactUs from "./component/contactUs";
+import About from "./component/About";
+import Error from "./component/Error";
+import RestaurantsMenu from "./component/Restaurantsmenu";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 
 const App = () => {
   return (
     <>
       <div className="App-Layout">
         <Header />
-        <ResContainer />
+        <Outlet />
       </div>
     </>
   );
 };
 
-root.render(<App />);
+let appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <ResContainer />,
+      },
+      {
+        path: "/About",
+        element: <About />,
+      },
+      {
+        path: "/ContactUs",
+        element: <ContactUs />,
+      },
+      {
+        path: "/RestaurantsMenu/:resId",
+        element: <RestaurantsMenu />,
+      },
+    ],
+  },
+]);
 
-
-// const Foodcard = (props) => {
-//   return (
-//     <>
-//       <div className="card">
-//         <img
-//           className="cardimage cardpart"
-//           alt="fooditem"
-//           src={props.src}
-//         ></img>
-//         <h2 className="resname cardpart">{props.name}</h2>
-//         <p className="cardcuisine cardpart">{props.cuisine}</p>
-//         <ul className="profile">
-//           <li className="rating">
-//             <span className="fa fa-star checked"></span>
-//           </li>
-//           {props.rating}
-//           <li>27 min</li>
-//           <li>500 for two</li>
-//         </ul>
-//       </div>
-//     </>
-//   );
-// };
-
-// let imageId = props.info.cloudinaryImageId;
-
-// const guide = <p>top right to navigate.</p>;
-    
-    // const Title = () => {
-    //   return (
-    //     <>
-    //       <h1 id="heading">This is about React !</h1>
-    //       {guide}
-    //     </>
-    //   );
-    // };
-    // const Heading = () => {
-    //   return (
-    //     <>
-    //       <Title />
-    //       <p>
-    //         hello its the react which makes the develpoer life easy by its easy
-    //         syntax which is possible becasue of jsx , also the differenet
-    //         capabilities in react provided by the different bundelr.
-    //       </p>
-    //     </>
-    //   );
-    // };
-    
-    // const element = (
-    //   <>
-    //     <h4>i am react element.</h4>
-    //   </>
-    // );
-    
-    // const display = (
-    //   <>
-    //     <Heading />
-    //     {element}
-    //   </>
-    // );
+root.render(<RouterProvider router={appRouter} />);
