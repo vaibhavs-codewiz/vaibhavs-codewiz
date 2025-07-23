@@ -17,9 +17,14 @@
 ### 📬 Connect with me:
 
 <p align="left">
-  <a href="www.linkedin.com/in/vaibhav-sharma-12819a2b4" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="linkedin" height="20" width="20" /> LinkedIn</a><br>
-  <a href="mailto:vaibhavsharma00721@gmail.com"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" alt="email" height="20" width="20" /> Email</a>
+  <a href="https://www.linkedin.com/in/vaibhav-sharma-12819a2b4" target="_blank">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" alt="linkedin" height="20" width="20" /> LinkedIn
+  </a><br>
+  <a href="mailto:vaibhavsharma00721@gmail.com">
+    <img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" alt="email" height="20" width="20" /> Email
+  </a>
 </p>
+
 
 ---
 
